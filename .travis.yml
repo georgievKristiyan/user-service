@@ -4,7 +4,7 @@ services:
   - docker
 install: true
 script:
-  - mvn clean install
-  - docker build -t kristiyang/hackconf:user-service-$TRAVIS_BUILD_NUMBER . || travis_terminate 1;
+  - mvn clean install || travis_terminate 1;
   - echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin || travis_terminate 1;
+  - docker build -t kristiyang/hackconf:user-service-$TRAVIS_BUILD_NUMBER . || travis_terminate 1;
   - docker push kristiyang/hackconf:user-service-$TRAVIS_BUILD_NUMBER || travis_terminate 1;

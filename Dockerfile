@@ -1,6 +1,4 @@
-FROM ubuntu
-RUN apt update
-RUN apt -y install openjdk-8-jdk-headless
+FROM kristiyang/hackconf:base-1
 
 COPY target/user-service-0.0.1-SNAPSHOT.jar /user-service.jar
 
