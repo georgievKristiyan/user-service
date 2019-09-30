@@ -4,5 +4,5 @@ services:
   - docker
 install: true
 script:
-  - ./build/build_and_run_unit.sh || travis_terminate 1;
-  - ./build/docker_image.sh || travis_terminate 1;
+  - bash build/build_and_run_unit.sh || travis_terminate 1;
+  - bash build/docker_image.sh || travis_terminate 1;
