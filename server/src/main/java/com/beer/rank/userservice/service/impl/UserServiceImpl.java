@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
         } else {
             return ResponseEntity
                     .status(HttpStatus.OK)
-                    .body(Mono.just(generateToken(user)));
+                    .body(Mono.just(generateToken(repository.save(user))));
         }
     }
 }
