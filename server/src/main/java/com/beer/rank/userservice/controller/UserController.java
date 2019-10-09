@@ -1,4 +1,9 @@
 package com.beer.rank.userservice.controller;
 
-public interface UserController {
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController()
+@RequestMapping(value = "/users")
+public class UserController {
 }

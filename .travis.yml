@@ -2,7 +2,13 @@ language: java
 jdk: oraclejdk8
 services:
   - docker
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.m2
+
 install: true
 script:
-  - ./build/build_and_run_unit.sh || travis_terminate 1;
-  - ./build/docker_image.sh || travis_terminate 1;
+  - ./tools/build/build_and_run_unit.sh
+  - ./tools/build/docker_image.sh
