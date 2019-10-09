@@ -1,5 +1,10 @@
 package com.beer.rank.userservice.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
@@ -7,16 +12,14 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @NoArgsConstructor
+@Entity
+@Table(name = "users")
 public class User {
-    private String id;
 
-    private String firstName;
-
-    private String lastName;
-
+    @Column
+    @Id
     private String username;
 
+    @Column
     private String password;
-
-    private String email;
 }
