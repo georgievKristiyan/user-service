@@ -1,4 +1,4 @@
-POST 2b8a825d88b14cbabc33.westus.aksapp.io/users/login
+POST {{host}}/users/login
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 
 ###
 
-POST localhost:8080/users/create
+POST {{host}}/users/create
 Content-Type: application/json
 
 {
@@ -16,6 +16,8 @@ Content-Type: application/json
   "password": "password"
 }
 
+
+### These APIs are not public
 ###
 
 GET localhost:8080/health/readiness
