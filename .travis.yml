@@ -18,7 +18,7 @@ before_install:
   - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
   - chmod 700 get_helm.sh
   - sudo ./get_helm.sh
-  - ./helm init -c
+  - helm init -c
 script:
   - ./tools/build/build_and_run_unit.sh
   - ./tools/build/docker_image.sh
