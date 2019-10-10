@@ -4,6 +4,7 @@ dist: trusty
 services:
   - docker
 sudo: false
+
 cache:
   directories:
     - "$HOME/.m2"
