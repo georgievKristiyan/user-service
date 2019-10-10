@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: kristiyang/hackconf
-  tag: user-service-13
+  tag: user-service-latest
   pullPolicy: IfNotPresent
 
 service:
