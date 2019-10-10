@@ -13,6 +13,9 @@ service:
   type: ClusterIP
   port: 8080
 
+db:
+  pass: dummy-password
+
 ingress:
   enabled: true
   annotations: {
