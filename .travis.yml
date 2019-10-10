@@ -17,7 +17,7 @@ before_install:
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
   - chmod 700 get_helm.sh
-  - sudo ./get_helm.sh
+  - sudo ./get_helm.sh --version v2.9.1
   - helm init -c
 script:
   - ./tools/build/build_and_run_unit.sh
