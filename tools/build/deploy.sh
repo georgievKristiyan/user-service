@@ -8,6 +8,6 @@ helm upgrade \
 --set postgresql.postgresqlUsername=db-user \
 --set postgresql.postgresqlPassword=$USER_SERVICE_DB_PASSWORD \
 --set image.tag=user-service-$TRAVIS_BUILD_NUMBER \
---set db.pass=$USER_SERVICE_DB_PASSWORD
+--set db.pass=$USER_SERVICE_DB_PASSWORD \
 users \
 ./k8s/user-service/
